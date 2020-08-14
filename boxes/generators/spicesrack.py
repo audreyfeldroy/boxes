@@ -93,6 +93,7 @@ class SpicesRack(Boxes):
             self.moveTo(self.space/2, 0, 90)
             for i in range(self.numx):
                 self.polyline(0, -a, 0, (-180+2*a, r), 0, -90-a, w, -90)
+                self.rectangularHole(0.8 * r, -r, 0.7, 1.6, 0.6)
                 self.moveTo(0, -(self.diameter+self.space))
         self.ctx.stroke()
         if self.feet and not self.feet_done:
